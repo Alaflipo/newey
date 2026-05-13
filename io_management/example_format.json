@@ -1,0 +1,49 @@
+
+{
+    "nodes": [
+        {
+            "name": "1",
+            "label": "test",
+            "geo_pos": [123.21, 1243.21],
+            "pos": [45.2, 78.2], 
+
+            "label_node": {
+                "name": "test", 
+                "head": [], 
+                "geo_head": [], 
+                "end": [],
+
+                "port": 1,
+
+                "rectangle_points": [] 
+            }
+        },
+        {
+            "name": "2",
+            "label": "test2",
+            "geo_pos": [123.21, 1243.21],
+            "pos": [45.2, 78.2], 
+
+            "label_node": {
+                "name": "test2", 
+                "head": [], 
+                "geo_head": [], 
+                "end": [],
+
+                "port": 1,
+
+                "rectangle_points": [] 
+            }
+        }
+    ], 
+    "edges": [
+        {
+            "nodes": ["1", "2"],
+            "ports": [1, 5], 
+            "bend": [123.4, 123.2], 
+            "color": "21231",
+            "line_id": "234234", 
+            "min_dist": 123
+        }
+    ]
+}
