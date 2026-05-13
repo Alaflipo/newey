@@ -216,12 +216,12 @@ class Canvas(QWidget):
             self.handle_double_click()
 
         ### Experimental for adding extra nodes and edges 
-        if press and event.buttons() == Qt.LeftButton and event.modifiers() == Qt.ShiftModifier: 
-            # self.handle_modifier_click()
-            if ui.hover_edge and ui.hover_port: 
-                self.remove_edge()
-            elif ui.hover_node: 
-                self.remove_station()
+        # if press and event.buttons() == Qt.LeftButton and event.modifiers() == Qt.ShiftModifier: 
+        #     # self.handle_modifier_click()
+        #     if ui.hover_edge and ui.hover_port: 
+        #         self.remove_edge()
+        #     elif ui.hover_node: 
+        #         self.remove_station()
         
         ##### Handle everything when in drag mode #####
         if self.drag: 
