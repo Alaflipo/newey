@@ -488,12 +488,30 @@ class Group:
                         break 
                 # Make sure that the label port is reassigned to the port position of the first vertex in the straigten call
                 edge.other(v).assign_label(label_port)
-                
-                v.assign_both_ends(edge,port,force=False)
+
+                # generate closest ports to the current port and check them all 
+                ports_to_check = self.closest_ports(port)
+                for p in ports_to_check: 
+                    occ1 = v.is_occupied(p)
+                    occ2 = edge.other(v).is_occupied(opposite_port(p))
+                    if (occ1 is None or occ1 == edge) and (occ2 is None or occ2 == edge):
+                        v.assign_both_ends(edge,p,force=False) 
+                        break 
                 v.lock()
                 v = edge.other(v)
                 v.lock()
         return True 
+    
+    def closest_ports(self, port) -> list[int]: 
+        ports = [port]
+        n = 8
+
+        for i in range(1, n):
+            if i % 2 == 1:
+                ports.append((port + (i + 1) // 2) % n)
+            else:
+                ports.append((port - i // 2) % n)
+        return ports 
 
     def generate_circle_sequence(self, length):
         # the port sequence of the first 8 nodes

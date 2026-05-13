@@ -362,6 +362,10 @@ class Node:
             if type(item) == Label and not ignore_label: occupied.append(i)
         return occupied
     
+    def is_occupied(self, port) -> Edge | None: 
+        if type(self.ports[port]) == Edge: return self.ports[port]
+        else: return None
+    
     def first_free_port(self, exceptions=[]): 
         for i, port in enumerate(self.ports): 
             if i in exceptions: 
