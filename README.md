@@ -33,8 +33,8 @@ python main.py
 
 # Usage
 
-[!NOTE] 
-When first starting the application, it may take some time to load. Just sit back and relax!
+> [!NOTE] 
+> When first starting the application, it may take some time to load. Just sit back and relax!
 
 When starting the application, you are presented with a schematic version of the Vienna metro map. This initial layout has already been generated using both the port-assignment ILP and the layout LP, with default parameters set to, Horizontal label weight: 5% and Consistency weight: 10%. 
 
