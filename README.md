@@ -33,6 +33,9 @@ python main.py
 
 # Usage
 
+[!NOTE] 
+When first starting the application, it may take some time to load. Just sit back and relax!
+
 When starting the application, you are presented with a schematic version of the Vienna metro map. This initial layout has already been generated using both the port-assignment ILP and the layout LP, with default parameters set to, Horizontal label weight: 5% and Consistency weight: 10%. 
 
 From this starting point, the user can pan and zoom across the canvas to explore the network. Zooming can be performed by scrolling the mouse wheel or by pinching on a touchpad. Panning is possible by pressing and holding the middle mouse button or by using a two-finger gesture on the touchpad. The network can also be edited interactively in several ways. For example, users can drag and drop nodes to reposition them or manipulate an entire degree-2 string at once. Additional options are available in the left-side menu and the group context menus, both of which are explained in the sections below. A different file can be opened through the top navigation bar, which is also described in more detail later.
